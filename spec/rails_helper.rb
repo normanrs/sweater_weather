@@ -68,3 +68,8 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+def stub_bing_geo_calls
+  stub_request(:get, "http://dev.virtualearth.net/REST/v1/Locations").
+    to_return(body: File.read("./spec/fixtures/bing_denver.json"))
+end

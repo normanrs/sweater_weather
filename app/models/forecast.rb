@@ -23,8 +23,9 @@ class Forecast
 
   def get_data(address)
     location = BingService.new(address)
-    coords = location.coords
-    DarkskyService.new(coords)
+    coordinates = location.coords
+    sky = DarkskyService.new(coordinates)
+    sky.get_forecast
   end
 
 end
