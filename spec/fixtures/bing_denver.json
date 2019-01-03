@@ -1,0 +1,220 @@
+{
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2019 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+        {
+            "estimatedTotal": 5,
+            "resources": [
+                {
+                    "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        25.1460132598877,
+                        -124.790756225586,
+                        49.3843574523926,
+                        -66.9703979492188
+                    ],
+                    "name": "United States",
+                    "point": {
+                        "type": "Point",
+                        "coordinates": [
+                            39.4959144592285,
+                            -98.9899826049805
+                        ]
+                    },
+                    "address": {
+                        "countryRegion": "United States",
+                        "formattedAddress": "United States"
+                    },
+                    "confidence": "Low",
+                    "entityType": "CountryRegion",
+                    "geocodePoints": [
+                        {
+                            "type": "Point",
+                            "coordinates": [
+                                39.4959144592285,
+                                -98.9899826049805
+                            ],
+                            "calculationMethod": "Rooftop",
+                            "usageTypes": [
+                                "Display"
+                            ]
+                        }
+                    ],
+                    "matchCodes": [
+                        "Ambiguous"
+                    ]
+                },
+                {
+                    "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        49.0858955383301,
+                        1.92183601856232,
+                        49.1248016357422,
+                        1.99051201343536
+                    ],
+                    "name": "Us, Val-d'Oise, France",
+                    "point": {
+                        "type": "Point",
+                        "coordinates": [
+                            49.1009712219238,
+                            1.96816003322601
+                        ]
+                    },
+                    "address": {
+                        "adminDistrict": "IdF",
+                        "adminDistrict2": "Val-d'Oise",
+                        "countryRegion": "France",
+                        "formattedAddress": "Us, Val-d'Oise, France",
+                        "locality": "Us"
+                    },
+                    "confidence": "Low",
+                    "entityType": "PopulatedPlace",
+                    "geocodePoints": [
+                        {
+                            "type": "Point",
+                            "coordinates": [
+                                49.1009712219238,
+                                1.96816003322601
+                            ],
+                            "calculationMethod": "Rooftop",
+                            "usageTypes": [
+                                "Display"
+                            ]
+                        }
+                    ],
+                    "matchCodes": [
+                        "Ambiguous"
+                    ]
+                },
+                {
+                    "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        14.932779647525,
+                        -91.246535485848,
+                        14.9907204135101,
+                        -91.1665809692301
+                    ],
+                    "name": "Us, Guatemala",
+                    "point": {
+                        "type": "Point",
+                        "coordinates": [
+                            14.9617500305176,
+                            -91.2065582275391
+                        ]
+                    },
+                    "address": {
+                        "adminDistrict": "Quiché",
+                        "countryRegion": "Guatemala",
+                        "formattedAddress": "Us, Guatemala",
+                        "locality": "Us"
+                    },
+                    "confidence": "Low",
+                    "entityType": "PopulatedPlace",
+                    "geocodePoints": [
+                        {
+                            "type": "Point",
+                            "coordinates": [
+                                14.9617500305176,
+                                -91.2065582275391
+                            ],
+                            "calculationMethod": "Rooftop",
+                            "usageTypes": [
+                                "Display"
+                            ]
+                        }
+                    ],
+                    "matchCodes": [
+                        "Ambiguous"
+                    ]
+                },
+                {
+                    "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        63.1384506225586,
+                        48.660041809082,
+                        63.4448013305664,
+                        49.0390815734863
+                    ],
+                    "name": "Us, Russia",
+                    "point": {
+                        "type": "Point",
+                        "coordinates": [
+                            63.4344596862793,
+                            48.6664009094238
+                        ]
+                    },
+                    "address": {
+                        "adminDistrict": "Komi",
+                        "countryRegion": "Russia",
+                        "formattedAddress": "Us, Russia",
+                        "locality": "Udorskiy Rayon"
+                    },
+                    "confidence": "Low",
+                    "entityType": "River",
+                    "geocodePoints": [
+                        {
+                            "type": "Point",
+                            "coordinates": [
+                                63.4344596862793,
+                                48.6664009094238
+                            ],
+                            "calculationMethod": "Rooftop",
+                            "usageTypes": [
+                                "Display"
+                            ]
+                        }
+                    ],
+                    "matchCodes": [
+                        "Ambiguous"
+                    ]
+                },
+                {
+                    "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+                    "bbox": [
+                        42.9468116760254,
+                        -0.104039996862411,
+                        42.971851348877,
+                        -0.0802199989557266
+                    ],
+                    "name": "Uz, Hautes-Pyrénées, France",
+                    "point": {
+                        "type": "Point",
+                        "coordinates": [
+                            42.9669609069824,
+                            -0.0854900032281876
+                        ]
+                    },
+                    "address": {
+                        "adminDistrict": "Occitanie",
+                        "adminDistrict2": "Hautes-Pyrénées",
+                        "countryRegion": "France",
+                        "formattedAddress": "Uz, Hautes-Pyrénées, France",
+                        "locality": "Uz"
+                    },
+                    "confidence": "Low",
+                    "entityType": "PopulatedPlace",
+                    "geocodePoints": [
+                        {
+                            "type": "Point",
+                            "coordinates": [
+                                42.9669609069824,
+                                -0.0854900032281876
+                            ],
+                            "calculationMethod": "Rooftop",
+                            "usageTypes": [
+                                "Display"
+                            ]
+                        }
+                    ],
+                    "matchCodes": [
+                        "Ambiguous"
+                    ]
+                }
+            ]
+        }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "0144dd4746d240ab9c1dd313f83a6e8b|CO320968BC|7.7.0.0|Ref A: BC79EB7A3748484C8D01D364F84A7221 Ref B: CO1EDGE0919 Ref C: 2019-01-03T01:57:03Z"
+}
