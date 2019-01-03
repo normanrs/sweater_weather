@@ -22,6 +22,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~>3.1'
   gem 'figaro'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

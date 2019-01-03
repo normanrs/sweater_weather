@@ -39,6 +39,7 @@ class Forecast
     @uv_index       = data[:currently][:uvIndex]
     @hourlies       = get_hourlies(data)
     @dailies        = get_dailies(data)
+
   end
 
   def get_hourlies(data)

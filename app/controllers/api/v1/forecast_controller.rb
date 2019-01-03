@@ -2,7 +2,6 @@ class Api::V1::ForecastController < ApiBaseController
 
   def show
     weather = Forecast.new(params_in[:location])
-    # render json: weather
     render json: ForecastSerializer.new(weather)
   end
 
