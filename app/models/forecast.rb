@@ -42,13 +42,13 @@ class Forecast
   end
 
   def get_hourlies(data)
-    data[:hourly][:data].map do |hour|
+    data[:hourly][:data][0..7].map do |hour|
       Hourly.new(hour)
     end
   end
 
   def get_dailies(data)
-    data[:daily][:data].map do |day|
+    data[:daily][:data][0..4].map do |day|
       Daily.new(day)
     end
   end
