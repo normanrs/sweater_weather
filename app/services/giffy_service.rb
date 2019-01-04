@@ -13,7 +13,6 @@ class GiffyService
   def get_json(text)
     @response ||= Faraday.get("http://api.giphy.com/v1/gifs/search?q=#{text}&api_key=#{ENV["giffy_key"]}")
     @parsed ||= JSON.parse(@response.body, symbolize_names: true)
-    require "pry"; binding.pry
   end
 
 end
