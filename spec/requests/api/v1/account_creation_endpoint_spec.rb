@@ -23,4 +23,15 @@ describe 'the account creation endpoint' do
 
   end
 
+  # it 'returns an error for duplicate' do
+  #   user = User.create!(email: 'whatever@example', password: "password")
+  #   user_attempt = '?email=whatever@example.com&password=password&password_confirmation=password'
+  #
+  #   post "/api/v1/users#{user_attempt}"
+  #   expect(response).to have_http_status(422)
+  #   result = (response.body)
+  #   expect(result).to be_a(String)
+  #
+  # end
+
 end
