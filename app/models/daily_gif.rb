@@ -14,7 +14,8 @@ class DailyGif
 private
 
   def get_gif(summary)
-    GiffyService.new(summary)
+    gif_info = GiffyService.new(summary)
+    gif_info.url
   end
 
 end
