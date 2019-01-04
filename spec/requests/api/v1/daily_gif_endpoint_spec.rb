@@ -7,9 +7,9 @@ describe 'the daily gif endpoint' do
 
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
-      expect(result[:data][:daily_forecast.count]).to eq(8)
-      expect(result[:data][:daily_forecast[0.class]]).to eq(Hash)
-      expect(result[:data][:daily_forecast[0.count]]).to eq(3)
+      expect(result[:data].count).to eq(5)
+      expect(result[:data][0].class).to eq(Hash)
+      expect(result[:data][0].count).to eq(3)
 
     end
   end

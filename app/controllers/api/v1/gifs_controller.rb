@@ -2,9 +2,10 @@ class Api::V1::GifsController < ApiBaseController
 
   def show
     weather = Forecast.new(params_in[:location]).dailies
-    weather.map do |daily|
+    daily_gifs = weather.map do |daily|
       DailyGif.new(daily)
     end
+    render json: DailyGifSerializer.new(daily_gifs), status: 200
   end
 
 private
