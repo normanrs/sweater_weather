@@ -2,8 +2,9 @@ class Api::V1::GifsController < ApiBaseController
 
   def show
     weather = Forecast.new(params_in[:location]).dailies
-    daily_gif = DailyGif.new(weather)
-    require "pry"; binding.pry
+    weather.map do |daily|
+      DailyGif.new(daily)
+    end
   end
 
 private

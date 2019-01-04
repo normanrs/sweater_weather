@@ -10,4 +10,11 @@ class DailyGif
     @url              = get_gif(daily_in.summary)
   end
 
+
+private
+
+  def get_gif(summary)
+    GiffyService.new(summary)
+  end
+
 end
