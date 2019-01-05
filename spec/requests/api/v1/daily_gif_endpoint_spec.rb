@@ -11,7 +11,10 @@ describe 'the daily gif endpoint' do
       expect(result[:data][0].class).to eq(Hash)
       expect(result[:data][0][:attributes].count).to eq(4)
       expect(result[:data][0][:attributes][:url][0..21]).to eq("https://giphy.com/gifs")
-
+      expect(result[:data][0][:attributes].keys.include?(:time)).to be(true)
+      expect(result[:data][0][:attributes].keys.include?(:summary)).to be(true)
+      expect(result[:data][0][:attributes].keys.include?(:url)).to be(true)
+      expect(result[:data][0][:attributes].keys.include?(:copyright)).to be(true)
     end
   end
 end
