@@ -17,7 +17,7 @@ describe 'the account creation endpoint' do
 
     post "/api/v1/users#{user_attempt}"
 
-    expect(response).to have_http_status(422)
+    expect(response).to have_http_status(403)
     result = (response.body)
     expect(result).to be_a(String)
 
@@ -29,7 +29,7 @@ describe 'the account creation endpoint' do
 
     post "/api/v1/users#{user}"
     post "/api/v1/users#{user_attempt}"
-    expect(response).to have_http_status(422)
+    expect(response).to have_http_status(403)
     result = (response.body)
     expect(result).to be_a(String)
 

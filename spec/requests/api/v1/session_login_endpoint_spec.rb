@@ -10,7 +10,7 @@ describe 'the session login creation endpoint' do
 
     post "/api/v1/sessions#{user_attempt}"
 
-    expect(response).to have_http_status(201)
+    expect(response).to have_http_status(200)
     result = JSON.parse(response.body, symbolize_names: true)
     expect(result[:data][:attributes][:api_key]).to be_a(String)
 
@@ -21,7 +21,7 @@ describe 'the session login creation endpoint' do
 
     post "/api/v1/sessions#{user_attempt}"
 
-    expect(response).to have_http_status(422)
+    expect(response).to have_http_status(401)
     result = (response.body)
     expect(result).to be_a(String)
 
