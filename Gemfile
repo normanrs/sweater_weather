@@ -16,12 +16,12 @@ gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails'
   gem 'capybara'
+  gem 'figaro'
   gem 'launchy'
   gem 'pry'
+  gem 'rspec-rails'
   gem 'shoulda-matchers', '~>3.1'
-  gem 'figaro'
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'

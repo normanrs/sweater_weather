@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get :gifs, to: 'gifs#show'
       post :users, to: 'users#create'
       post :sessions, to: 'sessions#create'
+      post :favorites, to: 'favorites#create'
 
     end
   end

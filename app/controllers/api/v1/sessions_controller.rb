@@ -16,8 +16,4 @@ private
     params.permit(:email, :password)
   end
 
-  def passwords_match?
-    params[:password] == params[:password_confirmation]
-  end
-
 end
