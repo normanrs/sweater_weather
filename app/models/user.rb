@@ -1,6 +1,8 @@
 class User < ApplicationRecord
-  validates :email, presence: true, uniqueness: true
   has_secure_password
+  has_many :favorites
+  validates :email, presence: true, uniqueness: true
+  validates :password, length: { minimum: 1}, allow_blank: true
   before_create :generate_api_key
 
 private
