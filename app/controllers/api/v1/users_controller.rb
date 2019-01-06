@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApiBaseController
     if passwords_match? && user.save
       render json: UserSerializer.new(user), status: 201
     else
-      render json: "Registration failed!", status: 422
+      render json: "Registration failed!", status: 403
     end
 
   end
