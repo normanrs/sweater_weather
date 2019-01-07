@@ -14,8 +14,8 @@ describe 'the favorites creation endpoint' do
 
     expect(response).to have_http_status(200)
     result = JSON.parse(response.body, symbolize_names: true)
-    expect(result[:data][:attributes][:favorites]).to be_a(Array)
-    expect(result[:data][:attributes][:favorites][0][:location]).to eq(@location)
+    expect(result[:data]).to be_a(Array)
+    expect(result[:data][0][:attributes][:location]).to eq(@location)
 
   end
 
