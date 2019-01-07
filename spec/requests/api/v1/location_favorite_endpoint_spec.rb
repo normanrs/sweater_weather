@@ -6,10 +6,11 @@ describe 'the favorites creation endpoint' do
     @location = "Denver, CO"
   end
 
-  it 'accepts favorite location request' do
-    user_attempt = "?location=#{@location}&api_key=#{@user.api_key}"
+  it 'accepts favorite location request', :type => :request do
+    user_attempt = {location: @location, api_key: @user.api_key}
+    url =  "/api/v1/favorites"
 
-    post "/api/v1/favorites#{user_attempt}"
+    post url, params: user_attempt
 
     expect(response).to have_http_status(200)
     result = JSON.parse(response.body, symbolize_names: true)
@@ -28,6 +29,5 @@ describe 'the favorites creation endpoint' do
     expect(result).to be_a(String)
 
   end
-
 
 end
