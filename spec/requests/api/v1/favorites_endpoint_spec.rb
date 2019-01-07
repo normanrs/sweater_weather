@@ -8,11 +8,9 @@ describe 'the favorites endpoint' do
   end
 
   it 'returns content json from objects' do
-    # VCR.use_cassette('favorites_endpoint_spec', :record => :new_episodes) do
-    # VCR.use_cassette("favorites_endpoint_spec") do
-
+    VCR.use_cassette('favorites_endpoint_spec', :record => :new_episodes) do
       get "/api/v1/favorites?api_key=#{@user.api_key}"
-
+      
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
       expect(result[:data].count).to eq(2)
@@ -24,7 +22,7 @@ describe 'the favorites endpoint' do
       expect(result[:data][0][:attributes][:current_weather].keys.include?(:temperature_low)).to be(true)
       expect(result[:data][0][:attributes][:current_weather].keys.include?(:gif_url)).to be(true)
 
-    # end
+    end
   end
 
 end
