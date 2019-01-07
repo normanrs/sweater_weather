@@ -12,7 +12,6 @@ class Api::V1::SessionsController < ApiBaseController
 private
 
   def params_in
-    params.require(:action)
     params.permit(:email, :password)
   end
 

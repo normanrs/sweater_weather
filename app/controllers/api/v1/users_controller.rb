@@ -13,8 +13,7 @@ class Api::V1::UsersController < ApiBaseController
 private
 
   def params_in
-    params.require(:action)
-    params.permit(:email, :password)
+    params.permit(:email, :password, :password_confirmation)
   end
 
   def passwords_match?

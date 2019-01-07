@@ -11,7 +11,6 @@ class Api::V1::GifsController < ApiBaseController
 private
 
   def params_in
-    params.require(:action)
     params.permit(:location)
   end
 
