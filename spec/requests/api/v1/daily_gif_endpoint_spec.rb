@@ -7,7 +7,6 @@ describe 'the daily gif endpoint' do
 
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
-      expect(result[:data].count).to eq(5)
       expect(result[:data][0].class).to eq(Hash)
       expect(result[:data][0][:attributes].count).to eq(4)
       expect(result[:data][0][:attributes][:url][0..21]).to eq("https://giphy.com/gifs")
