@@ -2,17 +2,26 @@ class GiffyService
   attr_reader :url
 
   def initialize(summary)
-    @url = get_gif_url(summary)
+    @summary  = summary[0]
+    @url      = get_gif_url
   end
 
-  def get_gif_url(text)
-    all_data = get_json(text)
+  def get_gif_url
+    all_data = get_gif_json
     all_data[:data][0][:url]
   end
 
-  def get_json(text)
-    @response ||= Faraday.get("http://api.giphy.com/v1/gifs/search?q=#{text}&api_key=#{ENV["giffy_key"]}")
-    @parsed ||= JSON.parse(@response.body, symbolize_names: true)
+private
+
+  def get_gif_json
+    @base_url = "http://api.giphy.com"
+    extension = "/v1/gifs/search?q=#{@summary}&api_key=#{ENV["giffy_key"]}"
+    response  = faraday_conn.get(extension)
+    @parsed ||= JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def faraday_conn
+    Faraday.new(url: @base_url)
   end
 
 end

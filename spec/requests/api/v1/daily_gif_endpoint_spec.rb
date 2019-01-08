@@ -7,13 +7,14 @@ describe 'the daily gif endpoint' do
 
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
+      attrib = result[:data][0][:attributes]
       expect(result[:data][0].class).to eq(Hash)
-      expect(result[:data][0][:attributes].count).to eq(4)
-      expect(result[:data][0][:attributes][:url][0..21]).to eq("https://giphy.com/gifs")
-      expect(result[:data][0][:attributes].keys.include?(:time)).to be(true)
-      expect(result[:data][0][:attributes].keys.include?(:summary)).to be(true)
-      expect(result[:data][0][:attributes].keys.include?(:url)).to be(true)
-      expect(result[:data][0][:attributes].keys.include?(:copyright)).to be(true)
+      expect(attrib.count).to eq(4)
+      expect(attrib[:url][0..21]).to eq("https://giphy.com/gifs")
+      expect(attrib.keys.include?(:time)).to be(true)
+      expect(attrib.keys.include?(:summary)).to be(true)
+      expect(attrib.keys.include?(:url)).to be(true)
+      expect(attrib.keys.include?(:copyright)).to be(true)
     end
   end
 end

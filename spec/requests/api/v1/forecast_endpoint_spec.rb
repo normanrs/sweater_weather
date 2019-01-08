@@ -7,11 +7,13 @@ describe 'the forecast endpoint' do
 
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
-      expect(result[:data][:attributes]).not_to be_empty
-      expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
-      expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
-      expect(result[:data][:attributes][:hourlies].count).to eq(8)
-      expect(result[:data][:attributes][:dailies].count).to eq(5)
+      attrib = result[:data][:attributes]
+
+      expect(attrib).not_to be_empty
+      expect(attrib.keys.include?(:summary)).to be(true)
+      expect(attrib.keys.include?(:city_state)).to be(true)
+      expect(attrib[:hourlies].count).to eq(8)
+      expect(attrib[:dailies].count).to eq(5)
     end
   end
 
@@ -21,11 +23,13 @@ describe 'the forecast endpoint' do
 
       expect(response.status).to eq 200
       result = JSON.parse(response.body, symbolize_names: true)
-      expect(result[:data][:attributes]).not_to be_empty
-      expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
-      expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
-      expect(result[:data][:attributes][:hourlies].count).to eq(8)
-      expect(result[:data][:attributes][:dailies].count).to eq(5)
+      attrib = result[:data][:attributes]
+
+      expect(attrib).not_to be_empty
+      expect(attrib.keys.include?(:summary)).to be(true)
+      expect(attrib.keys.include?(:city_state)).to be(true)
+      expect(attrib[:hourlies].count).to eq(8)
+      expect(attrib[:dailies].count).to eq(5)
     end
   end
 

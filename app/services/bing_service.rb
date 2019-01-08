@@ -12,13 +12,13 @@ class BingService
     incoming[:resourceSets][0][:resources][0][:point][:coordinates]
   end
 
+private
+
   def get_coords_json
     url = "/REST/v1/Locations"
     response = conn.get(url)
     @parsed ||= JSON.parse(response.body, symbolize_names: true)
   end
-
-end
 
 	def conn
 		Faraday.new(url: "http://dev.virtualearth.net") do |faraday|
@@ -27,5 +27,6 @@ end
       faraday.params['key'] = ENV["bing_key"]
 			faraday.adapter Faraday.default_adapter
 		end
+  end
 
-	end
+end
