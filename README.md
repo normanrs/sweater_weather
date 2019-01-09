@@ -52,8 +52,10 @@ response: a short weather summary and gif at location
 
 ## Meta
 
-Norm Schultz – [@normanrs](https://twitter.com/normanrs)
-[https://github.com/normanrschultz](https://github.com/normanrschultz/)
+Norm Schultz
+Twitter:[@normanrs](https://twitter.com/normanrs)
+Github:[https://github.com/normanrschultz](https://github.com/normanrschultz/)
+Web:[http://www.normanrschultz.com](http://www.normanrschultz.com)
 
 ## Contributing
 
