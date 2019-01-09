@@ -48,7 +48,7 @@ response: a short weather summary and gif at location
 ## Release History
 
 * 1.0
-    * Completed Turing assignment
+    * Completed Turing assignment. All tests passing with test coverage at 99.74%.
 
 ## Meta
 
