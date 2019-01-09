@@ -15,6 +15,16 @@ class Api::V1::FavoritesController < ApiBaseController
     end
   end
 
+  def delete
+    user = User.find_by(api_key: params_in[:api_key])
+    if user
+      user.favorites.find_by(location: params_in[:location]).destroy
+      render json: FavoritesSerializer.new(user.favorites), status: 200
+    else
+      render json: "Request failed!", status: 401
+    end
+  end
+
 private
 
   def params_in
