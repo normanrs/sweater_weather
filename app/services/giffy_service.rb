@@ -11,7 +11,8 @@ class GiffyService
   end
 
   def get_json(text)
-    @response ||= Faraday.get("http://api.giphy.com/v1/gifs/search?q=#{text}&api_key=#{ENV["giffy_key"]}")
+    cleaned = text.downcase.gsub(/[^a-z0-9\s]/i, '')
+    @response ||= Faraday.get("http://api.giphy.com/v1/gifs/search?q=#{cleaned}&api_key=#{ENV["giffy_key"]}")
     @parsed ||= JSON.parse(@response.body, symbolize_names: true)
   end
 
