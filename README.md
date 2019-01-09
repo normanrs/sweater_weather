@@ -54,7 +54,7 @@ response: a short weather summary and gif at location
 
 Norm Schultz
 Twitter:[@normanrs](https://twitter.com/normanrs)
-Github:[https://github.com/normanrschultz](https://github.com/normanrschultz/)
+Github:[https://github.com/normanrs](https://github.com/normanrs/)
 Web:[http://www.normanrschultz.com](http://www.normanrschultz.com)
 
 ## Contributing
