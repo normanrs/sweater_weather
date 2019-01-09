@@ -28,7 +28,7 @@ describe 'the favorites endpoint' do
   end
 
   it 'deletes an existing favorite on a delete request' do
-    # VCR.use_cassette('delete_favorites_endpoint_spec', :record => :new_episodes) do
+    VCR.use_cassette('delete_favorites_endpoint_spec', :record => :new_episodes) do
       to_delete = "Denver, CO"
 
       delete "/api/v1/favorites?location=#{to_delete}&api_key=#{@user.api_key}"
@@ -38,13 +38,8 @@ describe 'the favorites endpoint' do
       attrib = result[:data][0][:attributes]
       expect(result[:data].count).to eq(1)
       expect(attrib[:location]).to eq(@fav2.location)
-      expect(attrib[:current_weather].keys.include?(:summary)).to be(true)
-      expect(attrib[:current_weather].keys.include?(:chance_of_precipitation)).to be(true)
-      expect(attrib[:current_weather].keys.include?(:temperature_high)).to be(true)
-      expect(attrib[:current_weather].keys.include?(:temperature_low)).to be(true)
-      expect(attrib[:current_weather].keys.include?(:gif_url)).to be(true)
 
-    # end
+    end
   end
 
 end
