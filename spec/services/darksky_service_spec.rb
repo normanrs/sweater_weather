@@ -25,7 +25,6 @@ describe DarkskyService do
 		expect(minute.keys.include?(:data)).to be(true)
 		expect(hour.keys.include?(:summary)).to be(true)
 		expect(hour.keys.include?(:data)).to be(true)
-
   end
 
 end
