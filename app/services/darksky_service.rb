@@ -11,8 +11,8 @@ class DarkskyService
   end
 
   def get_forecast_json(latitude, longitutde)
-    @response ||= Faraday.get("https://api.darksky.net/forecast/#{ENV["darksky_key"]}/#{latitude},#{longitutde}")
-    @parsed ||= JSON.parse(@response.body, symbolize_names: true)
+    response = Faraday.get("https://api.darksky.net/forecast/#{ENV["darksky_key"]}/#{latitude},#{longitutde}")
+    @get_forecast_json ||= JSON.parse(response.body, symbolize_names: true)
   end
 
 end
