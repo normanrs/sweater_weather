@@ -29,5 +29,19 @@ describe 'the forecast endpoint' do
     end
   end
 
+  it 'returns content json from spaced search' do
+    VCR.use_cassette("sd_forecast_endpoint_spec") do
+      get "/api/v1/forecast?location=san diego,ca"
+
+      expect(response.status).to eq 200
+      result = JSON.parse(response.body, symbolize_names: true)
+      expect(result[:data][:attributes]).not_to be_empty
+      expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
+      expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
+      expect(result[:data][:attributes][:hourlies].count).to eq(8)
+      expect(result[:data][:attributes][:dailies].count).to eq(5)
+    end
+  end
+
 
 end
