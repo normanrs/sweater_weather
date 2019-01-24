@@ -8,7 +8,7 @@ describe GiffyService do
 			service = GiffyService.new(summary)
 
 			expect(service).to be_a(GiffyService)
-      expect(service.url[0..21]).to eq("https://giphy.com/gifs")
+      expect(service.url[0..21]).to eq("https://giphy.com/embe")
   end
 
 	it "handles punctuation" do
@@ -17,7 +17,7 @@ describe GiffyService do
 			service = GiffyService.new(summary)
 
 			expect(service).to be_a(GiffyService)
-      expect(service.url[0..21]).to eq("https://giphy.com/gifs")
+      expect(service.url[0..21]).to eq("https://giphy.com/embe")
   end
 
 	it "speeds API calls with memoization" do

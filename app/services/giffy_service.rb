@@ -7,7 +7,7 @@ class GiffyService
 
   def get_gif_url(text)
     all_data = get_json(text)
-    all_data[:data][0][:url]
+    all_data[:data][0][:embed_url]
   end
 
   def get_json(text)
