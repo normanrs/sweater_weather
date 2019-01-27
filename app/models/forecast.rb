@@ -33,12 +33,12 @@ class Forecast
     @latitude       = data[:latitude]
     @longitude      = data[:longitude]
     @hourly_summary = data[:hourly][:summary]
-    @daily_summary  = data[:daily][:data][0][:summary]
+    @daily_summary  = data[:minutely][:summary]
     @feels_like     = data[:currently][:apparentTemperature]
     @humidity       = data[:currently][:humidity]
     @visibility     = data[:currently][:visibility]
     @uv_index       = data[:currently][:uvIndex]
-    @gif_url        = get_gif(data[:currently][:summary])
+    @gif_url        = get_gif(data[:minutely][:summary])
     @hourlies       = get_hourlies(data)
     @dailies        = get_dailies(data)
 

@@ -5,6 +5,6 @@ RSpec.describe Forecast, type: :model do
     location = 'denver,co'
     forecast = Forecast.new(location)
     expect(forecast).to be_a(Forecast)
-
+    require "pry"; binding.pry
   end
 end
