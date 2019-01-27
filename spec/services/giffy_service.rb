@@ -11,7 +11,7 @@ describe GiffyService do
       expect(service.url[0..21]).to eq("https://giphy.com/embe")
   end
 
-	it "handles punctuation" do
+	it "cleands text" do
 		  summary = "Sky is clear, calm."
 
 			service = GiffyService.new(summary)
