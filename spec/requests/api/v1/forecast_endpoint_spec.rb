@@ -10,6 +10,7 @@ describe 'the forecast endpoint' do
       expect(result[:data][:attributes]).not_to be_empty
       expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
       expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
+      expect(result[:data][:attributes].keys.include?(:gif_url)).to be(true)
       expect(result[:data][:attributes][:hourlies].count).to eq(8)
       expect(result[:data][:attributes][:dailies].count).to eq(5)
     end
@@ -24,6 +25,7 @@ describe 'the forecast endpoint' do
       expect(result[:data][:attributes]).not_to be_empty
       expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
       expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
+      expect(result[:data][:attributes].keys.include?(:gif_url)).to be(true)
       expect(result[:data][:attributes][:hourlies].count).to eq(8)
       expect(result[:data][:attributes][:dailies].count).to eq(5)
     end
@@ -38,10 +40,10 @@ describe 'the forecast endpoint' do
       expect(result[:data][:attributes]).not_to be_empty
       expect(result[:data][:attributes].keys.include?(:summary)).to be(true)
       expect(result[:data][:attributes].keys.include?(:city_state)).to be(true)
+      expect(result[:data][:attributes].keys.include?(:gif_url)).to be(true)
       expect(result[:data][:attributes][:hourlies].count).to eq(8)
       expect(result[:data][:attributes][:dailies].count).to eq(5)
     end
   end
-
 
 end

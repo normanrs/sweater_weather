@@ -22,7 +22,6 @@ describe 'the favorites endpoint' do
       expect(attrib[:current_weather].keys.include?(:chance_of_precipitation)).to be(true)
       expect(attrib[:current_weather].keys.include?(:temperature_high)).to be(true)
       expect(attrib[:current_weather].keys.include?(:temperature_low)).to be(true)
-      expect(attrib[:current_weather].keys.include?(:gif_url)).to be(true)
 
     end
   end

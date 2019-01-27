@@ -16,6 +16,7 @@ class Forecast
               :humidity,
               :visibility,
               :uv_index,
+              :gif_url,
               :hourlies,
               :dailies
 
@@ -37,6 +38,7 @@ class Forecast
     @humidity       = data[:currently][:humidity]
     @visibility     = data[:currently][:visibility]
     @uv_index       = data[:currently][:uvIndex]
+    @gif_url        = get_gif(data[:currently][:summary])
     @hourlies       = get_hourlies(data)
     @dailies        = get_dailies(data)
 
@@ -55,6 +57,11 @@ class Forecast
   end
 
 private
+
+  def get_gif(summary)
+    gif_info = GiffyService.new(summary)
+    gif_info.url
+  end
 
   def get_data(city_state)
     location = BingService.new(city_state)

@@ -16,6 +16,7 @@ class ForecastSerializer
               :humidity,
               :visibility,
               :uv_index,
+              :gif_url,
               :hourlies,
               :dailies
 
