@@ -18,6 +18,8 @@ gem 'rack-cors', require: 'rack/cors'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
   gem 'figaro'
   gem 'launchy'
   gem 'pry'
